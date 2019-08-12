@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Windows.Forms;
 
 namespace PersonalinformationFinder
 {
@@ -20,9 +22,31 @@ namespace PersonalinformationFinder
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string Selectpolder = "";
+       
+        
         public MainWindow()
         {
             InitializeComponent();
         }
+        
+
+        public string ReadFile(string path)
+        {
+            return File.ReadAllText(path);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FolderBrowserDialog folderopen = new FolderBrowserDialog();
+            folderopen.Description = "검색할 폴더";
+            folderopen.ShowDialog();
+
+            // 선택한 폴더의 경로
+            string Selectpolder = folderopen.SelectedPath;
+            Console.WriteLine();
+        }
+
+       
     }
 }
