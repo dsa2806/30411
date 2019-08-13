@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="[개인정보 검색기 ver 1.0]" Height="450" Width="611.189">
     <Grid Background="#FF8E935E">
-        <Button Content="열기" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="95,57,0,0"/>
+        <Button Content="열기" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="95,57,0,0" Click="open"/>
         <ListView HorizontalAlignment="Left" Height="302" VerticalAlignment="Top" Width="204" Margin="32,95,0,0" SelectionChanged="ListView_SelectionChanged">
             <ListView.View>
                 <GridView>
@@ -17,9 +17,9 @@
         </ListView>
         <TextBox Height="302" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="369,95,30,0" TextChanged="TextBox_TextChanged"/>
         <Button Content="저장" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="438,57,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="이름" VerticalAlignment="Top" Width="77" Margin="255,43,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="이름" VerticalAlignment="Top" Width="77" Margin="216,19,0,0" RenderTransformOrigin="0.156,-0.261"/>
         <Button Content="검색
-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="332,43,0,0" Height="23" Click="Button_Click_1"/>
+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Margin="308,19,0,0" Height="23" Click="Search"/>
 
     </Grid>
 </Window>
